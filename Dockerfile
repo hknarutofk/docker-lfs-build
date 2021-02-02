@@ -46,6 +46,9 @@ ENV INITRD_TREE=$LFS
 WORKDIR /bin
 RUN rm sh && ln -s bash sh
 
+# 采用国内源地址
+ADD sources.list /etc/apt/sources.list
+
 # install required packages
 RUN apt-get update && apt-get install -y \
     build-essential                      \
