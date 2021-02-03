@@ -1,7 +1,8 @@
 #!/bin/bash -x
 
 # prepare to build
-/book/chapter-3.sh
+# 镜像内已经包含了源码
+# /book/chapter-3.sh
 
 # execute rest as root
 exec sudo -E -u root /bin/sh - <<EOF

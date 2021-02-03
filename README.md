@@ -1,3 +1,29 @@
+# 本地构建Docker镜像
+docker build -t evilfreelancer/docker-lfs-build .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
 # Linux From Scratch builder in Docker container
 
 This repository is a collection of scripts created especially to

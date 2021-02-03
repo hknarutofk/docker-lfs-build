@@ -1,6 +1,8 @@
 #!/bin/bash
-
+set -x -e
 echo "> Continue with chroot environment..."
+# make: /bin/sh: Command not found
+ln -s -f /tools/bin/sh /bin/sh
 
 sh /book/chapter-6/6.5-create-directories.sh
 sh /book/chapter-6/6.6-create-essentials.sh
