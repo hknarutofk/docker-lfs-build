@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -x
 
 # create essential files and symlinks
 ln -sv /tools/bin/{bash,cat,dd,echo,ln,pwd,rm,stty} /bin
