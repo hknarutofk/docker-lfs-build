@@ -1,7 +1,20 @@
 # 本地构建Docker镜像
 docker build -t evilfreelancer/docker-lfs-build .
 
-# losetup Device or resource
+# 构建
+Start container:
+
+docker-compose up -d
+Then login to LFS container:
+
+docker-compose exec lfs bash
+Start building:
+
+/book/book.sh
+Result of building will be in dist folder.
+
+
+# 故障排除 losetup Device or resource
 调整为手动构建
 1. 在容器内，root运行
 ```
