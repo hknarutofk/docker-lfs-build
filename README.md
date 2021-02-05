@@ -5,13 +5,17 @@ docker build -t evilfreelancer/docker-lfs-build .
 Start container:
 
 cp docker-compose.yml.dist docker-compose.yml
+
 docker-compose up -d
+
 Then login to LFS container:
 
 docker-compose exec lfs bash
+
 Start building:
 
 /book/book.sh
+
 Result of building will be in dist folder.
 
 
