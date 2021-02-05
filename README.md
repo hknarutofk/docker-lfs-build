@@ -25,8 +25,11 @@ sh /image/1.configure-syslinux.sh
 sudo sh -x buildImageOnHostOS.sh
 ```
 说明：Fedora31上，容器内losetup会报错，无奈在宿主机器上构建lfs.ram
+
 3. 在容器内，root运行
+```
 sh /image/3.build-iso.sh
+```
 
 最终得到dist/lfs.iso
 
