@@ -1,25 +1,21 @@
 # 本地构建Docker镜像
 docker build -t evilfreelancer/docker-lfs-build .
 
+# losetup Device or resource
+调整为手动构建
+1. 在容器内，root运行
+```
+sh /image/1.configure-syslinux.sh
+```
+2. 在容器外，源码目录下运行
+```
+sudo sh -x buildImageOnHostOS.sh
+```
+说明：Fedora31上，容器内losetup会报错，无奈在宿主机器上构建lfs.ram
+3. 在容器内，root运行
+sh /image/3.build-iso.sh
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+最终得到dist/lfs.iso
 
 
 ---
