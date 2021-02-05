@@ -5,11 +5,11 @@ services:
     restart: unless-stopped
     privileged: true
     image: evilfreelancer/docker-lfs-build
-    volumes:
+    volumes:      
+      - ./lfs:/lfs
       - ./book:/lfs/book
       - ./image:/lfs/image
       - ./sources:/lfs/sources
-      - ./tools:/lfs/tools
-      - ./lfs:/lfs
+      - ./tools:/lfs/tools      
       - ./dist:/dist
     entrypoint: ["sleep", "inf"]
