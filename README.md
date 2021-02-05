@@ -4,6 +4,7 @@ docker build -t evilfreelancer/docker-lfs-build .
 # 构建
 Start container:
 
+cp docker-compose.yml.dist docker-compose.yml
 docker-compose up -d
 Then login to LFS container:
 
