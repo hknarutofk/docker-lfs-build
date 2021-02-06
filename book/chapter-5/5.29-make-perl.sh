@@ -10,8 +10,6 @@ tar -xf /sources/perl-5*.tar.xz -C /tmp/ \
   && pushd /tmp/perl \
   && sh Configure -des -Dprefix=/tools -Dlibs=-lm -Uloclibpth -Ulocincpth \
   && make \
-  && cp -v perl cpan/podlators/scripts/pod2man /tools/bin \
-  && mkdir -pv /tools/lib/perl5/5.28.0 \
-  && cp -Rv lib/* /tools/lib/perl5/5.28.0 \
+  && make install \
   && popd \
   && rm -rf /tmp/perl
