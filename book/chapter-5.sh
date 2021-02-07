@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 echo ">>> Chapter 5 - Build toolchain..."
-export MAKEFLAGS="-j6"
+export MAKEFLAGS="-j"`lscpu | grep CPU\(s\): | grep -v NUMA | awk '{print $2}'`
 
 /book/chapter-5/5.4-make-binutils.sh
 /book/chapter-5/5.5-make-gcc.sh

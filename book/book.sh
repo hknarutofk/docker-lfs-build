@@ -20,5 +20,5 @@ sync
 /book/chapter-9.sh
 
 # create dist
-/image/image.sh
+# /image/image.sh
 EOF

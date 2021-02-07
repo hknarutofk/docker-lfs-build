@@ -2,7 +2,7 @@
 set -x -e
 echo "> Continue with chroot environment..."
 
-export MAKEFLAGS="-j6"
+export MAKEFLAGS="-j"`lscpu | grep CPU\(s\): | grep -v NUMA | awk '{print $2}'`
 
 sh -x /book/chapter-6/6.5-create-directories.sh
 sh -x /book/chapter-6/6.6-create-essentials.sh
