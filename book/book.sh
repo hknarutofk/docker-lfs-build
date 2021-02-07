@@ -14,10 +14,19 @@ sync
 
 # continue
 /book/chapter-5.sh
+echo "chapter 5 finished, type Enter to continue" && read
+
 /book/chapter-6.sh
+echo "chapter 6 finished, type Enter to continue" && read
+
 /book/chapter-7.sh
+echo "chapter 7 finished, type Enter to continue" && read
+
 /book/chapter-8.sh
+echo "chapter 8 finished, type Enter to continue" && read
+
 /book/chapter-9.sh
+echo "chapter 9 finished, type Enter to continue" && read
 
 # create dist
 # /image/image.sh
