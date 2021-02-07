@@ -1,5 +1,5 @@
 #!/bin/bash -x
-set -e 
+
 echo "> Configure system..."
 mkdir -p /tmp/log
 sh -x /book/chapter-7/7.2-make-lfs-bootscripts.sh > /tmp/log/7.2-make-lfs-bootscripts.sh.log
