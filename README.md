@@ -1,42 +1,28 @@
 # 本地构建Docker镜像
-docker build -t evilfreelancer/docker-lfs-build .
+## x86_64平台
+
+sh -x 10.buildDockerImageX86_64.sh
+
+## arm64平台
+
+sh -x 11.buildDockerImageAarch64.sh
 
 # 构建
-Start container:
+sh -x 20.buildLFS.sh
 
-cp docker-compose.yml.dist docker-compose.yml
+sh -x 30.makeiso.sh
 
-docker-compose up -d
+最终得到dist/lfs.iso，参考如下
 
-Then login to LFS container:
-
-docker-compose exec lfs bash
-
-Start building:
-
-/book/book.sh
-
-Result of building will be in dist folder.
-
-
-# 故障排除 losetup Device or resource
-调整为手动构建
-1. 在容器内，root运行
 ```
-sh /image/1.configure-syslinux.sh
-```
-2. 在容器外，源码目录下运行
-```
-sudo sh -x buildImageOnHostOS.sh
-```
-说明：Fedora31上，容器内losetup会报错，无奈在宿主机器上构建lfs.ram
+[yeqiang@harbor docker-lfs-build]$ ls -lh dist/
+total 1.3G
+-rw-r--r-- 1 root root 193M 2021-02-23 11:40:28 lfs.bz2
+-rw-r--r-- 1 root root 202M 2021-02-23 11:40:29 lfs.iso
+-rw-r--r-- 1 root root 977M 2021-02-23 11:40:28 lfs.ram
 
-3. 在容器内，root运行
-```
-sh /image/3.build-iso.sh
 ```
 
-最终得到dist/lfs.iso
 
 
 ---
