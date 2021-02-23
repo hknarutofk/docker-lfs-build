@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-echo "> Make system bootable..."
+echo "2>&1 | tee  Make system bootable..."
 export MAKEFLAGS="-j"`lscpu | grep CPU\(s\): | grep -v NUMA | awk '{print $2}'`
 mkdir -p /tmp/log
 sh /book/chapter-8/8.2-create-fstab.sh /tmp/log/8.2-create-fstab.sh.log
