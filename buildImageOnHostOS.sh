@@ -21,7 +21,7 @@ export IMAGE_HDD=`pwd`/dist/lfs.hdd
 # location of initrd tree
 export INITRD_TREE=$LFS
 
-
+sudo rm `pwd`/dist/* -f
 echo "> Creating ramdisk..."
 cd image
 
